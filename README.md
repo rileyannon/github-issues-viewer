@@ -1,4 +1,9 @@
 # Getting Started
+To run in development mode (**recommended**):
+```
+npm run dev 
+```
+
 To run as an React Web App:
 ```
 npm run dev:react 
