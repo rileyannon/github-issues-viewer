@@ -1,0 +1,20 @@
+{
+    "appId": "com.rileyannon.gitkraken-assessment",
+    "files": [
+        "dist-electron",
+        "dist-react"
+    ],
+    "icon": "./sampleIcon.png",
+    "mac": {
+        "target": "dmg"
+    },
+    "linux": {
+        "target": "AppImage",
+        "category": "Utility"
+    },
+    "win": {
+        "target": [
+            "portable", "msi"
+        ]
+    }
+}
