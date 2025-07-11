@@ -1,5 +1,4 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -44,8 +43,33 @@
 }
 
 table, th, td {
-  width: 100%;
+  overflow-wrap: break-word;
+  width: 15rem;
   margin-top: 1rem;
   border: 1px solid black;
   border-collapse: collapse;
+}
+
+table {
+  table-layout: fixed;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.page-button {
+  margin: 5px;
+}
+
+#success {
+  color: green;
+  font-weight: bold;
+}
+
+#error {
+  color: red;
+  font-weight: bold;
 }

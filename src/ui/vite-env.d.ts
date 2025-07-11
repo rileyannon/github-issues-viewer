@@ -5,7 +5,7 @@ export {};
 declare global {
   interface Window {
     github: {
-      GetRepoIssues: (owner: string, repo: string) => Promise<any>;
+      GetRepoIssues: (owner: string, repo: string, pat: string) => Promise<any>;
     };
   }
 }

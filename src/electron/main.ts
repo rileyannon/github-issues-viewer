@@ -13,15 +13,16 @@ app.on("ready", () => {
     });
 
     if (isDev()) {
-        mainWindow.loadURL("http://localhost:5173");        
-        mainWindow.webContents.openDevTools();
+        mainWindow.loadURL("http://localhost:5173");     
+        mainWindow.maximize();   
     }
     else {
         mainWindow.loadFile(path.join(app.getAppPath(), "dist-react", "index.html"));
+        mainWindow.maximize();
     }
 
     // ignore event for now, just worry about args
-    ipcMain.handle("getrepoissues", (_, owner, repo) => {
-        return GetRepoIssues(owner, repo, mainWindow);
+    ipcMain.handle("getrepoissues", (_, owner, repo, pat) => {
+        return GetRepoIssues(owner, repo, pat, mainWindow);
     });
 })

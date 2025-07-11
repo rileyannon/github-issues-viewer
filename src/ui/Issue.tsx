@@ -1,3 +1,5 @@
+import React from 'react';
+
 type User = 
 {
     login: string;
@@ -19,20 +21,18 @@ type IssueProps = {
 
 export type { IssueProps, User };
 
-function Issue(issueProps : IssueProps)
+const Issue = React.memo((issueProps : IssueProps) =>
 {
-    console.log(issueProps);
-
     return (
         <tr className="issue">
-            <td><a href={issueProps.url} target="_blank" rel="noopener noreferrer">{issueProps.title}</a></td>
+            <td><a href={issueProps.url} target="_blank" rel="noopener noreferrer">{issueProps.title}</a> <br/> <strong>Issue #{issueProps.number}</strong></td>
+            <td><p><img src={issueProps.user.avatarUrl} className="avatar"/><br/><a href={issueProps.user.profileUrl} target="_blank" rel="noopener noreferrer">{issueProps.user.login}</a></p></td>
             <td><p>{issueProps.body}</p></td>
-            <td><p><strong>Issue #{issueProps.number}</strong> by <a href={issueProps.user.profileUrl} target="_blank" rel="noopener noreferrer">{issueProps.user.login}</a></p></td>
-            <td><p>State: {issueProps.state}</p></td>
-            <td><p>Created at: {issueProps.createdAt.toISOString()}</p></td>
-            <td><p>Updated at: {issueProps.updatedAt.toISOString()}</p></td>
+            <td><p>{issueProps.state}</p></td>
+            <td><p>{issueProps.createdAt.toLocaleString("en-US", { timeZone: "MST" })}</p></td>
+            <td><p>{issueProps.updatedAt.toLocaleString("en-US", { timeZone: "MST" })}</p></td>
         </tr>
     );
-}
+});
 
 export default Issue; 

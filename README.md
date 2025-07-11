@@ -23,11 +23,19 @@ npm run dist:mac      # For Mac
 # Sources
 
 **Supplemental Materials**
+
 [Electron Course - Code Desktop Applications (inc. React and Typescript)](https://www.youtube.com/watch?v=fP-371MN0Ck) - This YouTube course from freeCodeCamp.org was absolutely invaluable for getting me started with Electron. This helped me set up the foundation of my application, which I then used as the canvas for the rest of my development cycle. 
 
 [GitHub - REST API endpoints for issues](https://docs.github.com/en/rest/issues/issues?apiVersion=2022-11-28#list-repository-issues) - helped me set up the majority of my githubApi.ts service layer
 
+[GitHub - Using pagination in the REST API](https://docs.github.com/en/rest/using-the-rest-api/using-pagination-in-the-rest-api?apiVersion=2022-11-28)
+
+[GitHub - Octokit pagination](https://github.com/octokit/octokit.js#pagination) - Used to learn how to use iterator with pagination
+
+[React.memo Documentation](https://react.dev/reference/react/memo)
+
 [Electronjs.org - ipcMain](https://www.electronjs.org/docs/latest/api/ipc-main) - setting up ipcMain
+
 [Electronjs.org - ipcRenderer](https://www.electronjs.org/docs/latest/api/ipc-renderer) - setting up ipcRenderer
 
 **Debugging Materials** 
