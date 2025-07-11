@@ -6,7 +6,7 @@ import { GetRepoIssues } from './githubApi.js';
 
 app.on("ready", () => {
     const mainWindow = new BrowserWindow({
-        title: "GitKraken Assessment",
+        title: "GitHub Issues Viewer",
         webPreferences: {
             preload: getPreloadPath(),
         }

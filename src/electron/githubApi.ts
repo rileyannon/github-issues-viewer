@@ -12,8 +12,6 @@ export async function GetRepoIssues(owner : string, repo : string, pat : string,
     try {
         console.log(`Fetching issues for repo: ${owner}/${repo}`);
 
-        console.log(pat);
-
         // if a personal access token is provided, use it
         const octokitInstance = pat
             ? new Octokit({ auth: pat })
@@ -36,7 +34,6 @@ export async function GetRepoIssues(owner : string, repo : string, pat : string,
         mainWindow.webContents.send("getrepoissues", pages);
         return pages;
     } catch (err : Error | any) {
-        //console.error("GitHub API error:", err);
         mainWindow.webContents.send("getrepoissues", { error: true, message: err.message });
         return { error: true, message: err.message };
     }

@@ -1,5 +1,7 @@
 {
-  "name": "gitkraken-assessment",
+  "name": "github-issues-viewer",
+  "author": "Riley Annon",
+  "description": "A cross-platform GitHub Issues Viewer built with React and Electron.",
   "private": true,
   "version": "0.0.0",
   "type": "module",
