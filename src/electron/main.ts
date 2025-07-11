@@ -1,7 +1,8 @@
-import {app, BrowserWindow} from 'electron';
-import {getPreloadPath} from './pathResolver.js';
+import { app, BrowserWindow, ipcMain } from 'electron';
+import { getPreloadPath } from './pathResolver.js';
 import path from 'path';
-import {isDev} from './util.js';
+import { isDev } from './util.js';
+import { Test } from './githubApi.js';
 
 app.on("ready", () => {
     const mainWindow = new BrowserWindow({
@@ -18,4 +19,10 @@ app.on("ready", () => {
     else {
         mainWindow.loadFile(path.join(app.getAppPath(), "dist-react", "index.html"));
     }
+
+    //Test(mainWindow);
+
+    ipcMain.handle("github-test", () => {
+        return Test(mainWindow);
+    });
 })
