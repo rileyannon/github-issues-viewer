@@ -29,6 +29,7 @@ npm run dist:win      # For Windows - make sure you run as Admin when building
 npm run dist:linux    # For Linux
 npm run dist:mac      # For Mac
 ```
+If the build seems to hang at any point, check your /dist directory as it may have built regardless.
 
 # Behind the Design
 
@@ -71,6 +72,8 @@ These materials were used to help build the foundational knowledge needed to acc
 [Electronjs.org - ipcRenderer](https://www.electronjs.org/docs/latest/api/ipc-renderer) - setting up ipcRenderer
 
 **Debugging Materials** 
+
+These were used to debug specific issues.
 
 [dotenv-examples](https://github.com/dotenv-org/examples/tree/master) - Getting environment variables was not as straightforward as I expected initially, especially compared to my work in "pure" React and Node.js. This repo from dotenv was incredibly helpful in getting it set up
 
