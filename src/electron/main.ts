@@ -2,7 +2,7 @@ import { app, BrowserWindow, ipcMain } from 'electron';
 import { getPreloadPath } from './pathResolver.js';
 import path from 'path';
 import { isDev } from './util.js';
-import { Test } from './githubApi.js';
+import { GetRepoIssues } from './githubApi.js';
 
 app.on("ready", () => {
     const mainWindow = new BrowserWindow({
@@ -20,9 +20,8 @@ app.on("ready", () => {
         mainWindow.loadFile(path.join(app.getAppPath(), "dist-react", "index.html"));
     }
 
-    //Test(mainWindow);
-
-    ipcMain.handle("github-test", () => {
-        return Test(mainWindow);
+    // ignore event for now, just worry about args
+    ipcMain.handle("getrepoissues", (_, owner, repo) => {
+        return GetRepoIssues(owner, repo, mainWindow);
     });
 })
