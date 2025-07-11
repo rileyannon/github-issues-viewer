@@ -37,6 +37,15 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+.title {
+  display: block;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+table, th, td {
+  width: 100%;
+  margin-top: 1rem;
+  border: 1px solid black;
+  border-collapse: collapse;
 }
